@@ -9,9 +9,9 @@ This repository contains the code shown in the LIVE with Astronomer on 2023-03-0
 3. Make sure you are in an environment that has the [Airflow Amazon provider](https://registry.astronomer.io/providers/amazon) installed. If you use `virtualenv` you can run the following commands:
 
 ```sh
-virtualenv venv
-source venv/bin/activate
-pip3 install -r requirements.txt
+virtualenv .venv
+source .venv/bin/activate
+pip3 install -r requirements.txt --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.5.1/constraints-3.7.txt"
 ```
 
 4. Provide your own Amazon connection by creating a `connections.yaml` file based upon `connections_template.yaml`. 
